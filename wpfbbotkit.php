@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WPFBBotKit
+ * Plugin Name: Facebook Marineetstamp Bot
  * Plugin URI: https://jrgould.com
  * Description: A Facebook Messenger Bot Framework for WordPress
  * Version: 1.0.0
