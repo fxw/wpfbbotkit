@@ -171,6 +171,7 @@ class WPFBBotKit_Plugin {
 				}
 				foreach ( $entry['messaging'] as $message ) {
 					do_action( 'wpfbbk_message_received', new WPFBBotKit_Messaging( $message, $this ) );
+
 				}
 			}
 		}
