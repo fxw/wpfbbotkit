@@ -198,9 +198,9 @@ class WPFBBotKit_Plugin {
 			}
 		}
 
-		return
-			" { \"speech\": \"COOL\", \"displayText\": \"COOL\", \"source\": \"wpfbbk-marineetstamp\" }";
-
+		return new WP_REST_Response(
+			" \"speech\": \"COOL\", \"displayText\": \"COOL\", \"source\": \"wpfbbk-marineetstamp\" "
+			, 200 );
 	}
 
 	/**
