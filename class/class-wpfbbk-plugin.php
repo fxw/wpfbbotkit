@@ -176,6 +176,28 @@ class WPFBBotKit_Plugin {
 			}
 		}
 
+		if ( 'POST' === $method && isset( $req['object'] ) && 'page' === $req['originalRequest'] && isset( $req['result'] ) ) {
+			require_once dirname( __FILE__ ) . '/class-wpfbbk-apiai-messaging.php';
+
+			$entries = $req['contexts'];
+			if ( ! is_array( $entries ) ) {
+				$entries = array( $entries );
+			}
+
+			foreach ( $entries as $entry ) {
+				if ( ! isset( $entry['parameters'] ) ) {
+					continue;
+				}
+				if ( ! is_array( $entry['parameters'] ) ) {
+					$entry['parameters'] = array( $entry['parameters'] );
+				}
+				foreach ( $entry['messaging'] as $message ) {
+					do_action( 'wpfbbk_message_received', new WPFBBotKit_Messaging( $message, $this ) );
+
+				}
+			}
+		}
+
 		return new WP_REST_Response( 0, 200 );
 	}
 
