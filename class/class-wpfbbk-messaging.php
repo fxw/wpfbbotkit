@@ -43,47 +43,7 @@ class WPFBBotKit_Messaging {
 		$this->messages_api = $this->fb_api_base . '/me/messages?access_token=' . urlencode( $this->page_access_token );
 		$this->user_api     = $this->fb_api_base . '/' . $this->sender['id'] . '?access_token=' . urlencode( $this->page_access_token );
 
-		add_action( 'wpfbbk_message_received', function( $M ) {
 
-			// Retrieve user's info from Facebook API
-			$info = $M->get_user_info();
-
-			// set fallback since user info is not guaranteed
-			$name = $info->first_name ? $info->first_name : 'Human';
-
-			if ( ! $M->postback ){
-
-				// if no postback  is set, respond to text message
-				if ( 'hello' === $M->text || 'hi' === $M->text ) {
-					$M->reply_with_text( "Hi $name!", true );
-					$M->reply_with_image_url( 'https://media.giphy.com/media/13TXV4kfn7r2iA/giphy.gif' );
-				} else {
-
-					// reply_with_buttons is one of a few reply helpers provided by `WPFBBK_Messaging`
-					$M->reply_with_buttons(
-						"Sorry, $name. I don't understand what you said. Do you want me to send you a gif?",
-						array(
-							array(
-								'type'  => 'postback',
-								'title' => '  Sure.',
-								'payload' => 'REPLY_WITH_GIF',
-							),
-							array(
-								'type'  => 'postback',
-								'title' => '  No, go away.',
-								'payload' => 'NO_REPLY',
-							),
-						)
-					);
-				}
-			} else {
-
-				// postback has been received
-				if( 'REPLY_WITH_GIF' === $M->postback ) {
-					$M->reply_with_image_url( 'https://media.giphy.com/media/13TXV4kfn7r2iA/giphy.gif' );
-				}
-			}
-		}, 10, 1 );
 
 	}
 
@@ -111,7 +71,44 @@ class WPFBBotKit_Messaging {
 	 */
 	protected function send_200_continue() {
 		ob_start();
-		echo '0';
+		// Retrieve user's info from Facebook API
+		$info = $this->get_user_info();
+
+		// set fallback since user info is not guaranteed
+		$name = $info->first_name ? $info->first_name : 'Human';
+
+		if ( ! $this->postback ){
+
+			// if no postback  is set, respond to text message
+			if ( 'hello' === $$this->text || 'hi' === $this->text ) {
+				$this->reply_with_text( "Hi $name!", true );
+				$this->reply_with_image_url( 'https://media.giphy.com/media/13TXV4kfn7r2iA/giphy.gif' );
+			} else {
+
+				// reply_with_buttons is one of a few reply helpers provided by `WPFBBK_Messaging`
+				$this->reply_with_buttons(
+					"Sorry, $name. I don't understand what you said. Do you want me to send you a gif?",
+					array(
+						array(
+							'type'  => 'postback',
+							'title' => '  Sure.',
+							'payload' => 'REPLY_WITH_GIF',
+						),
+						array(
+							'type'  => 'postback',
+							'title' => '  No, go away.',
+							'payload' => 'NO_REPLY',
+						),
+					)
+				);
+			}
+		} else {
+
+			// postback has been received
+			if( 'REPLY_WITH_GIF' === $this->postback ) {
+				$this->reply_with_image_url( 'https://media.giphy.com/media/13TXV4kfn7r2iA/giphy.gif' );
+			}
+		}
 		http_response_code( 200 );
 		header( 'Content-Encoding: none' );
 		header( 'Connection: close' );
