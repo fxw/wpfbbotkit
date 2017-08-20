@@ -198,7 +198,16 @@ class WPFBBotKit_Plugin {
 			}
 		}
 
-		return new WP_REST_Response( 0, 200 );
+		return new WP_REST_Response(
+			"{
+					\"speech\": \"COOL\",
+					\"displayText\": \"COOL\",
+					# \"data\": data,
+					# \"contextOut\": [],
+					\"source\": \"apiai-weather-webhook-sample\"
+				}
+			"
+			, 200 );
 	}
 
 	/**

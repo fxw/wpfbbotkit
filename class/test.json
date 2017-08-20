@@ -1,0 +1,232 @@
+{
+  "object": "page",
+  "entry": [
+    {
+      "id": "156172921624690",
+      "time": 1503218191002,
+      "messaging": [
+        {
+          "sender": {
+            "id": "1493575447356448"
+          },
+          "recipient": {
+            "id": "156172921624690"
+          },
+          "timestamp": 1503218190612,
+          "message": {
+            "mid": "mid.$cAACOCfbSsbhkMA6RFFd_slLIttIS",
+            "seq": 30931,
+            "text": "hello bot"
+          }
+        }
+      ]
+    }
+  ]
+}
+
+
+{
+  "originalRequest": {
+    "source": "facebook",
+    "data": {
+      "sender": {
+        "id": "1493575447356448"
+      },
+      "recipient": {
+        "id": "156172921624690"
+      },
+      "message": {
+        "mid": "mid.$cAACOCfbSsbhkMnK_vFeAS117P14O",
+        "text": "produit 1234",
+        "seq": 30953
+      },
+      "timestamp": 1.503258310588E12
+    }
+  },
+  "id": "e0eadd68-a7c0-4ef5-8cfe-ea14c98136bf",
+  "timestamp": "2017-08-20T19:45:11.208Z",
+  "lang": "fr",
+  "result": {
+    "source": "agent",
+    "resolvedQuery": "produit 1234",
+    "speech": "",
+    "action": "",
+    "actionIncomplete": false,
+    "parameters": {
+      "productId": "1234",
+      "action": "produit"
+    },
+    "contexts": [
+      {
+        "name": "generic",
+        "parameters": {
+          "action.original": "produit",
+          "productId": "1234",
+          "action": "produit",
+          "facebook_sender_id": "1493575447356448",
+          "productId.original": "1234"
+        },
+        "lifespan": 4
+      }
+    ],
+    "metadata": {
+      "intentId": "90024312-5300-4dc4-8c63-095f0bab2c49",
+      "webhookUsed": "true",
+      "webhookForSlotFillingUsed": "false",
+      "intentName": "Produits"
+    },
+    "fulfillment": {
+      "speech": "",
+      "messages": [
+        {
+          "type": 0,
+          "speech": ""
+        }
+      ]
+    },
+    "score": 1.0
+  },
+  "status": {
+    "code": 200,
+    "errorType": "success"
+  },
+  "sessionId": "7f91b263-a712-4d34-96cb-5475a45ff9cd"
+}
+
+
+{
+  "originalRequest": {
+    "source": "facebook",
+    "data": {
+      "sender": {
+        "id": "1493575447356448"
+      },
+      "recipient": {
+        "id": "156172921624690"
+      },
+      "message": {
+        "mid": "mid.$cAACOCfbSsbhkMn14sFeATgvqNjyG",
+        "text": "produit 956320",
+        "seq": 30964
+      },
+      "timestamp": 1.503259013296E12
+    }
+  },
+  "id": "91095e75-eb4b-484b-8397-c6444d62cf2e",
+  "timestamp": "2017-08-20T19:56:53.95Z",
+  "lang": "fr",
+  "result": {
+    "source": "agent",
+    "resolvedQuery": "produit 956320",
+    "speech": "",
+    "action": "",
+    "actionIncomplete": false,
+    "parameters": {
+      "productId": "956320",
+      "action": "produit"
+    },
+    "contexts": [
+      {
+        "name": "generic",
+        "parameters": {
+          "action.original": "produit",
+          "productId": "956320",
+          "action": "produit",
+          "facebook_sender_id": "1493575447356448",
+          "productId.original": "956320"
+        },
+        "lifespan": 3
+      }
+    ],
+    "metadata": {
+      "intentId": "90024312-5300-4dc4-8c63-095f0bab2c49",
+      "webhookUsed": "true",
+      "webhookForSlotFillingUsed": "false",
+      "intentName": "Produits"
+    },
+    "fulfillment": {
+      "speech": "",
+      "messages": [
+        {
+          "type": 0,
+          "speech": ""
+        }
+      ]
+    },
+    "score": 1.0
+  },
+  "status": {
+    "code": 200,
+    "errorType": "success"
+  },
+  "sessionId": "7f91b263-a712-4d34-96cb-5475a45ff9cd"
+}
+
+
+{
+  "originalRequest": {
+    "source": "facebook",
+    "data": {
+      "sender": {
+        "id": "1493575447356448"
+      },
+      "recipient": {
+        "id": "156172921624690"
+      },
+      "message": {
+        "mid": "mid.$cAACOCfbSsbhkMpZXoVeAVEOidVhN",
+        "text": "produit 59379",
+        "seq": 30982
+      },
+      "timestamp": 1.503260643233E12
+    }
+  },
+  "id": "92d7a52a-1ff5-46b9-bd47-79bda308d330",
+  "timestamp": "2017-08-20T20:24:03.885Z",
+  "lang": "fr",
+  "result": {
+    "source": "agent",
+    "resolvedQuery": "produit 59379",
+    "speech": "",
+    "action": "",
+    "actionIncomplete": false,
+    "parameters": {
+      "productId": "59379",
+      "action": "produit"
+    },
+    "contexts": [
+      {
+        "name": "generic",
+        "parameters": {
+          "action.original": "produit",
+          "productId": "59379",
+          "action": "produit",
+          "facebook_sender_id": "1493575447356448",
+          "productId.original": "59379"
+        },
+        "lifespan": 4
+      }
+    ],
+    "metadata": {
+      "intentId": "90024312-5300-4dc4-8c63-095f0bab2c49",
+      "webhookUsed": "true",
+      "webhookForSlotFillingUsed": "false",
+      "intentName": "Produits"
+    },
+    "fulfillment": {
+      "speech": "",
+      "messages": [
+        {
+          "type": 0,
+          "speech": ""
+        }
+      ]
+    },
+    "score": 1.0
+  },
+  "status": {
+    "code": 200,
+    "errorType": "success"
+  },
+  "sessionId": "7f91b263-a712-4d34-96cb-5475a45ff9cd"
+}
