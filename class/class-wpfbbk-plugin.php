@@ -199,7 +199,7 @@ class WPFBBotKit_Plugin {
 		}
 
 		return new WP_REST_Response(
-			"{ \"speech\": \"COOL\", \"displayText\": \"COOL\", \"source\": \"wpfbbk-marineetstamp\" }"
+			" \"speech\": \"COOL\", \"displayText\": \"COOL\", \"source\": \"wpfbbk-marineetstamp\" "
 			, 200 );
 	}
 
