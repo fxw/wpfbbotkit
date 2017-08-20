@@ -2,7 +2,7 @@
 
 class WPFBBotKit_Plugin {
 
-	protected $string_ns = 'wpfbbk_';
+	protected $string_ns = 'wpfbmarineetstamp_';
 	protected $api_namespace;
 	protected $access_token;
 
